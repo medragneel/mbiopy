@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<section class="gc_per">
+    <h1>Count Point Mutations</h1>
+    <br><br>
+    <div class="gc">
+        <form action={{url_for('mutations_count')}} method="post">
+
+            <input placeholder="enter seq1" class="inp-gc seq1" type="text" name="seq1"> <br><br> 
+            <input placeholder="enter seq2" class="inp-gc seq2" type="text" name="seq2"> <br>  <br>
+            <span style="font-size: 0.7em;">please enter two sequences that have the same length</span> <br> <br>
+        <button class="btn gc-btn" type="submit">Compare</button>
+        </form>
+        {{seq1}}
+        <br>
+        {{seq2}}
+        <br>
+        mutations_count : {{mc}}
+
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+

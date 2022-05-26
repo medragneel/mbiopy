@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+<header>
+
+            <div class="ctn">
+                <h1>BioPy Tech</h1>
+                <p>A Collection Of Useful tools For Bioinformatics</p>
+            </div>
+            <div class="bio_svg">
+                <img src="../static/images/bpt.svg" alt="">
+            </div>
+            <button class="btn check_tools" type="submit">
+                <a href={{url_for('tools')}}><span> &#8594;</span> Check Tools </a> </button>
+            
+</header>
+
+    <section class="tools_slider">
+        <h1>Tools</h1>
+        <div class="tls tool">
+             <div class="tl tl1">
+            <a href={{url_for('seq_length')}}>
+                <img src={{url_for('static',filename='icons/length.svg')}} alt="">
+                <h2>Sequence Length</h2>
+            </a>
+        </div>
+
+
+        <div class="tl tl2">
+            <a href={{url_for('dna_cmp')}}>
+            <img src={{url_for('static',filename='icons/cmp.svg')}} alt="">
+            <h2>Dna Complementary </h2>
+            </a>
+        </div>
+
+        <div class="tl tl3">
+            <a href={{url_for('gc')}}>
+            <span><h1>GC%</h1></span>
+            <h2>GC% Calculator</h2>
+            </a>
+        </div>
+
+        <div class="more">
+            <a href={{url_for('tools')}}>
+            <img src={{url_for('static',filename='icons/right_arrow.svg')}} alt="">
+            </a>
+        </div>
+
+
+        </div>
+    </section>
+    <section class="use">
+        <h1>How To Use</h1>
+        <div>
+            <h1>Rna To Peptide</h1>
+            <img src={{url_for('static',filename='images/rna_to_peptide.gif')}} alt="">
+        </div>
+        <div>
+        <img src={{url_for('static',filename='images/dna_to_rna.gif')}} alt="">
+        <h1>Dna To Rna</h1>
+        </div>
+
+        <div>
+        <h1>Gc%</h1>
+        <img src={{url_for('static',filename='images/gc_per.gif')}} alt="">
+        </div>
+    </section>
+    <section class="created_by">
+        <h1>Created By</h1>
+        <div class="devlopper">
+            <div>
+                <h2>Mahdjoub Mohamed</h2>
+            </div>
+            <div>
+                <h2>Boucetta Mohamed El Amine</h2>
+            </div>
+        </div>
+    </section>
+     <footer style='text-align: center;padding:20px;'>
+         &#169;Copyright All Right Reserved
+     </footer>   
+    
+{% endblock %}

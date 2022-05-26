@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<section class="gc_per">
+    <h1>Dna Complementary </h1>
+    <br><br>
+    <div class="gc">
+        <form action={{url_for('dna_cmp')}} method="post">
+            
+            <textarea placeholder="enter a dna sequence" class="inp-gc" type="text" name="dna_cmp"></textarea> <br><br>
+        <button class="btn gc-btn" type="submit">Get dna Reverse</button>
+        </form>
+       brin transcris : {{f}}
+        <br>
+        brin comp: {{cmp}}
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+

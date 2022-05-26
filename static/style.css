@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+body {
+    background-color: #f1f1f1;
+    width:100%;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    height: 300vh;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+    font-weight:600;
+}
+nav .logo{
+    padding: 30px 1px;
+}
+nav .logo img{
+    width: 35px;
+ 
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav.on_scroll{
+    background-color: #2d224e;
+    opacity: 0.8;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+
+}
+nav.on_scroll ul li a{
+    color: #fff;
+}
+
+nav.on_scroll .logo{
+    filter: brightness(0) invert(1);
+}
+nav.on_scroll .ham  span{
+    background-color: #fff;
+}
+nav .ham{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 35px;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+nav .ham span{
+    width: 100%;
+    padding: 3px 20px;
+    background-color: #333;
+}
+header{
+
+    width: 100%;
+    padding: 180px 40px;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    grid-template-rows: 300px 1fr;
+    place-items: center;
+}
+header .ctn{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header .ctn p{
+    padding: 40px;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+header img{
+    padding: 30px 20px;
+    width: 500px;
+}
+.active{
+    display: flex;
+}
+.btn{
+    font-weight: 600;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 9px;
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+}
+.check_tools{
+    color: #fff;
+    border:2px solid #2d224e;
+    background-color: transparent;
+    color: #333;
+
+}
+.check_tools span{
+    font-size: 1.6em;
+    font-weight: 900;
+
+}
+.check_tools:hover{
+    background-color: #2d224e;
+    opacity: 0.8;
+    filter: brightness(1.5);
+}
+.check_tools:hover a{ 
+    color: #fff;
+
+}
+.check_tools:hover img{
+    filter: invert(1);
+}
+img.gear{
+    width: 65px;
+}
+section{
+    text-align: center;
+    padding: 120px 30px;
+}
+.tls{
+    width: 100%;
+    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(100px,1fr));
+    gap: 15px;
+    color: #fff;
+}
+.tls .tl a{
+    background-color: #fff;
+    opacity: 0.8;
+    color: #333;
+    border-radius: 8px;
+    padding: 130px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.tls span h1{
+    font-size: 3em;
+}
+.tls .tl.tl5 img{
+    width: 100px;
+}
+.tls .tl.tl6 img {
+    width: 100px;
+}
+.tls .tl img{
+    width: 200px;
+}
+.about_cotent{
+    padding: 60px 50px;
+}
+.gc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.gc-btn{
+    background-color: #2d224e;
+    color: #fff;
+}
+.inp-gc{
+    padding: 60px 100px;
+    outline: none;
+    border: none;
+    border-radius: 9px;
+}
+.tool .more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.use div {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 80px;
+    place-items: center;
+}
+.use div img{
+    padding: 10px;
+}
+.devlopper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.created_by h1{
+    padding: 40px;
+}
+.devlopper div{
+    color: #fff;
+    padding: 20px;
+    background-color: #333;
+}
+@media  only screen and (max-width: 700px){
+    nav{
+        background-color: #2d224e;
+        opacity: 0.8;
+    }
+    nav .ham{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .ham span{
+        background-color: #fff;
+    }
+    nav .logo{
+        filter: brightness(0) invert(1);
+    }
+    nav ul{
+        display: none;
+        width: 100%;
+        min-height: 70vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        filter: brightness(0) invert(1);
+    }
+
+.tls
+{
+    grid-template-columns: repeat(1,minmax(300px,1fr));
+    gap: 30px;
+}
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang=en> 
+    <head> 
+        <meta charset=UTF-8>
+        <link rel="stylesheet" href={{url_for('static',filename='style.css')}}>
+        <title>Bio_Py_Tech</title>
+    </head> 
+    <body> 
+        <nav>
+            <div class="logo">
+                <img  id='logo' src="../static/images/logo-dark-bio-py-tech.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href={{url_for('home')}}>Home</a></li>
+                <li><a href={{url_for('tools')}}>Tools</a></li>
+                <li><a href={{url_for('about')}}>About</a></li>
+            </ul>
+            <div class="ham">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+        </nav>
+          {% block content %}{% endblock %}
+          {% block tools %}{% endblock %}
+
+    <script src={{url_for('static',filename='app.js')}}></script>
+        
+    </body>
+</html>
+

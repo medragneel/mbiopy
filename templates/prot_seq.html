@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<section class="gc_per">
+    <h1>From Rna To Peptide</h1>
+    <br><br>
+    <div class="gc">
+        <form action={{url_for('pseq')}} method="post">
+            
+        <textarea placeholder="enter a protein sequence" class="inp-gc" type="text" name="protein_seq"></textarea> <br><br>
+        <button class="btn gc-btn" type="submit">Get Peptide</button>
+        </form>
+
+      rna seq:  {{psq}} <br><br>
+      peptide: {{pep}}
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+
+
