@@ -35,6 +35,7 @@ class Btp:
 
         return ''.join(reverse)
     def find_mut(self,seq1,seq2):
+        list_mut=[]
         count = 0
         len_sq= 0
         if len(seq1) < len(seq2):
@@ -48,7 +49,9 @@ class Btp:
                 count+=1
                 print(i)
                 print(seq1[i],seq2[i])
-        return count
+                t_mut=(i,seq1[i],seq2[i])
+                list_mut.append(t_mut)
+        return list_mut
     def length(self,seq):
         return len(seq)
     def calculate_pms(self,seq):

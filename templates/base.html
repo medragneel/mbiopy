@@ -2,13 +2,16 @@
 <html lang=en> 
     <head> 
         <meta charset=UTF-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href={{url_for('static',filename='style.css')}}>
         <title>Bio_Py_Tech</title>
     </head> 
     <body> 
         <nav>
             <div class="logo">
+                <a href={{url_for('home')}}>
                 <img  id='logo' src="../static/images/logo-dark-bio-py-tech.png" alt="">
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href={{url_for('home')}}>Home</a></li>

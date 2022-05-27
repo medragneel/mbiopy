@@ -18,8 +18,23 @@
         {{seq1}}
         <br>
         {{seq2}}
+    <table style='border-collapse: separate; border-spacing: 0 15px;border: 1px solid #333;'>				<!-- create an table object -->
+     <tr>				<!-- "tr" represents a row -->
+       <th>Position Mutation</th>	<!-- use "th" to indicate header row -->
+       <th>nucleotide 1</th>
+       <th>nucleotide 2</th>
+     </tr> 
+     {% for m in mc %}
+     <tr>				<!-- once again use tr for another row -->
+         <td>{{m[0] + 1}}</td>
+         <td style='color: red;'>{{m[1]}}</td>
+         <td style='color: red;'>{{m[2]}}</td>
+
+     </tr>    
+     {% endfor %}
+   </table>
         <br>
-        mutations_count : {{mc}}
+        mutations_count : {{l}} 
 
     </div>
 </section>

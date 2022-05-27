@@ -19,6 +19,7 @@ ps=''
 pm=0
 psq=''
 pep=''
+mut_len= 0
 
 @app.route('/')
 def home():
@@ -55,14 +56,15 @@ def dna_cmp():
 
 @app.route('/tools/mutations_count',methods=['GET','POST'])
 def mutations_count():
-    global seq1,seq2,mut_count
+    global seq1,seq2,mut_count,mut_len
     if request.method == 'POST':
         seq1=request.form['seq1']
         seq2=request.form['seq2']
         print(seq1)
         print(seq2)
         mut_count= bio.find_mut(seq1,seq2)
-    return render_template('mutation.html',seq1=seq1,seq2=seq2,mc=mut_count)
+        mut_len= len(mut_count)
+    return render_template('mutation.html',seq1=seq1,seq2=seq2,mc=mut_count,l=mut_len)
 
 @app.route('/tools/seq_length',methods=['GET','POST'])
 def seq_length():
@@ -94,7 +96,7 @@ def about():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
 
 
 
