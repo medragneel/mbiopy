@@ -11,3 +11,34 @@ bg.addEventListener('click',()=>{
     ul.classList.toggle('active')
                 })
 
+
+const rnaSeq = document.querySelector('#rnaSeq')
+const protSeq = document.querySelector('#protSeq')
+const mut = document.querySelector('#mutation')
+const mut_count = document.querySelector('#mut_count')
+console.log(rnaSeq.innerHTML)
+
+async function saveRna() {
+    fn=await window.showSaveFilePicker(); 
+   let wr= await fn.createWritable();
+    await wr.write(rnaSeq.innerText);
+    await wr.close()
+    
+}
+
+
+async function saveProt() {
+    fn=await window.showSaveFilePicker(); 
+   let wr= await fn.createWritable();
+    await wr.write(protSeq.innerText);
+    await wr.close()
+    
+}
+async function saveMut() {
+    fn=await window.showSaveFilePicker(); 
+   let wr= await fn.createWritable();
+    await wr.write(mut.innerText);
+    await wr.write(`\n${mut_count.innerHTML}`);
+    await wr.close()
+    
+}

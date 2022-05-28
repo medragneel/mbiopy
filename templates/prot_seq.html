@@ -15,8 +15,9 @@
         </form>
 
       rna seq:  {{psq}} <br><br>
-      peptide: {{pep}}
+      peptide: <span id='protSeq'>{{pep}}</span>
     </div>
+    <button class='btn_save' onclick='saveProt();'>Save protein As</button>
 </section>
 
 {% endblock %}

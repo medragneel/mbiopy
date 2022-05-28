@@ -18,7 +18,7 @@
         {{seq1}}
         <br>
         {{seq2}}
-    <table style='border-collapse: separate; border-spacing: 0 15px;border: 1px solid #333;'>				<!-- create an table object -->
+    <table id='mutation' style='border-collapse: separate; border-spacing: 0 15px;border: 1px solid #333;'>				<!-- create an table object -->
      <tr>				<!-- "tr" represents a row -->
        <th>Position Mutation</th>	<!-- use "th" to indicate header row -->
        <th>nucleotide 1</th>
@@ -33,8 +33,8 @@
      {% endfor %}
    </table>
         <br>
-        mutations_count : {{l}} 
-
+        <span id='mut_count'> mutations_count : {{l}} </span>
+    <button class='btn_save' onclick='saveMut()'> save Mutation as</button>
     </div>
 </section>
 

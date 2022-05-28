@@ -10,11 +10,12 @@
     <div class="gc">
         <form action={{url_for('rna')}} method="post">
             
-            <textarea placeholder="enter a dna sequence" class="inp-gc" type="text" name="dna"></textarea> <br><br>
+        <textarea placeholder="enter a dna sequence" class="inp-gc" type="text" name="dna"></textarea> <br><br>
         <button class="btn gc-btn" type="submit">Get Rna Seq</button>
         </form>
 
-        {{rna}}
+        <span id='rnaSeq'>{{rna}}</span>
+        <button class='btn_save' onclick='saveRna();'>Save Rna As</button>
     </div>
 </section>
 
