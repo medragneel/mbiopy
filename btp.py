@@ -64,7 +64,7 @@ class Btp:
         return pmass
     def translate_dna(self,seq):
         peptide=[]
-        triplets=re.findall('...?', seq.replace(' ',''))
+        triplets=re.findall('...?',self.transcribe_dna(seq.replace(' ','')))
         print(triplets)
         for n in triplets:
             for key,value in proteins_codes.items():

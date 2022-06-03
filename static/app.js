@@ -16,7 +16,6 @@ const rnaSeq = document.querySelector('#rnaSeq')
 const protSeq = document.querySelector('#protSeq')
 const mut = document.querySelector('#mutation')
 const mut_count = document.querySelector('#mut_count')
-console.log(rnaSeq.innerHTML)
 
 async function saveRna() {
     fn=await window.showSaveFilePicker(); 

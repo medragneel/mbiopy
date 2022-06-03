@@ -6,6 +6,7 @@
 html
 {
     scroll-behavior: smooth;
+    scroll-padding-top: 40px;
 }
 html::-webkit-scrollbar
 {
@@ -68,7 +69,7 @@ nav.on_scroll .ham  span{
 nav .ham{
     position: absolute;
     top: 40px;
-    right: 30px;
+    right: 90px;
     width: 35px;
     display:none;
     flex-direction: column;
@@ -218,18 +219,76 @@ margin: 0 auto;
 .use div img{
     padding: 10px;
 }
+.created_by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .devlopper{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+    background-color: transparent;
+    width: 370px;
+    min-height:400px ;
+    border-radius: 8px;
 }
 .created_by h1{
     padding: 40px;
 }
-.devlopper div{
-    color: #fff;
-    padding: 20px;
-    background-color: #333;
+.devlopper .flip-inner{
+    border-radius: 8px;
+    position: relative;
+    width: 370px;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.devlopper:hover .flip-inner{
+
+    transform: rotateY(180deg);
+}
+.flip-front, .flip-back{
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-front{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+.flip-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+  transform: rotateY(180deg);
+    background-color: #fff;
+}
+#dev-logo{
+    border-radius: 50%;
+    width: 150px;
+    min-height: 150px;
+    object-fit: cover;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+}
+.flip-back img{
+    width: 200px;
+}
+.social img{
+    width: 25px;
 }
 th{
     padding: 5px 20px;
