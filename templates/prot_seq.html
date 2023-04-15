@@ -5,19 +5,24 @@
 
 {% block content %}
 <section class="gc_per">
-    <h1>From Rna To Peptide</h1>
+    <h1 class="align-center p-2">From Rna To Peptide</h1>
     <br><br>
+    <center>
     <div class="gc">
         <form action={{url_for('pseq')}} method="post">
-            
+
         <textarea placeholder="enter a protein sequence" class="inp-gc" type="text" name="protein_seq"></textarea> <br><br>
         <button class="btn gc-btn" type="submit">Get Peptide</button>
         </form>
+        <br>
+        <br>
+
 
       rna seq:  {{psq}} <br><br>
       peptide: <span id='protSeq'>{{pep}}</span>
     </div>
     <button class='btn_save' onclick='saveProt();'>Save protein As</button>
+    </center>
 </section>
 
 {% endblock %}

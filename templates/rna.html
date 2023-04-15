@@ -5,18 +5,23 @@
 
 {% block content %}
 <section class="gc_per">
-    <h1>From Dna To Rna</h1>
+    <h1 class="align-center p-2">From Dna To Rna</h1>
     <br><br>
+    <center>
     <div class="gc">
         <form action={{url_for('rna')}} method="post">
-            
+
         <textarea placeholder="enter a dna sequence" class="inp-gc" type="text" name="dna"></textarea> <br><br>
         <button class="btn gc-btn" type="submit">Get Rna Seq</button>
         </form>
+        <br>
+        <br>
+
 
         <span id='rnaSeq'>{{rna}}</span>
         <button class='btn_save' onclick='saveRna();'>Save Rna As</button>
     </div>
+    </center>
 </section>
 
 {% endblock %}

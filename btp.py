@@ -5,29 +5,29 @@ from proteins_masses import pms,proteins_codes
 class Btp:
     def Gc(self,seq):
         counter_gc=0
-        for n in seq:
-            if n == 'c' or n =='g':
+        for n in seq.upper():
+            if n == 'C' or n =='G':
                 counter_gc+=1 
 
         return (counter_gc / len(seq)) * 100
         
     def transcribe_dna(self,seq):
-        return re.sub('t','u',seq.lower())
+        return re.sub('T','U',seq.upper())
     def dna_reverse(self,seq):
         reverse=[]
-        for n in seq.lower():
-            if n == 'a':
-                n = 't'
+        for n in seq.upper():
+            if n == 'A':
+                n = 'T'
                 reverse.append(n)
-            elif n == 't':
-                n = 'a'
+            elif n == 'T':
+                n = 'A'
                 reverse.append(n)
-            elif n == 'c':
-                n = 'g'
+            elif n == 'C':
+                n = 'G'
                 reverse.append(n)
 
-            elif n == 'g':
-                n = 'c'
+            elif n == 'G':
+                n = 'C'
                 reverse.append(n)
         #print(seq)
         #print('|' * len(seq))
@@ -67,7 +67,7 @@ class Btp:
         triplets=re.findall('...?',self.transcribe_dna(seq.replace(' ','')))
         print(triplets)
         for n in triplets:
-            for key,value in proteins_codes.items():
+            for key,_ in proteins_codes.items():
                 if n in proteins_codes[key]:
                     print(n)
                     peptide.append(key)

@@ -5,17 +5,22 @@
 
 {% block content %}
 <section class="gc_per">
-    <h1>Gc Percentage</h1>
+    <h1 class="align-center p-2">Gc Percentage</h1>
     <br><br>
+    <center>
     <div class="gc">
         <form action={{url_for('gc')}} method="post">
-            
+
             <textarea placeholder="enter a dna sequence" class="inp-gc" type="text" name="gc_seq"></textarea> <br><br>
         <button class="btn gc-btn" type="submit">Calculate</button>
         </form>
+        <br>
+        <br>
+
 
         GC% = {{per}} %
     </div>
+    </center>
 </section>
 
 {% endblock %}

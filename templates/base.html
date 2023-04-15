@@ -1,36 +1,72 @@
-<!DOCTYPE html> 
-<html lang=en> 
-    <head> 
-        <meta charset=UTF-8>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href={{url_for('static',filename='style.css')}}>
-        <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon" />
-        <title>Bio_Py_Tech</title>
-    </head> 
-    <body> 
-        <nav>
-            <div class="logo">
-                <a href={{url_for('home')}}>
-                <img  id='logo' src="../static/images/logo-dark-bio-py-tech.png" alt="">
-                </a>
-            </div>
-            <ul class="nav-links">
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={{url_for('static',filename='main.css' )}}>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon" />
+    <title>Bio_Py_Tech</title>
+</head>
+
+<body>
+    <!--         <nav class="nav"> -->
+    <!--     <div class="logo"> -->
+    <!--         <h1>medmh</h1> -->
+    <!--     </div> -->
+    <!--     <a class="hamburger" href="#"> -->
+    <!--         <span class="bar bar1 bg-dark"></span> -->
+    <!--         <span class="bar bar2 bg-dark"></span> -->
+    <!--         <span class="bar bar3 bg-dark"></span> -->
+    <!--     </a> -->
+    <!--     <div class="nav-links"> -->
+    <!--         <ul> -->
+    <!--             <li><a href="#">1</a></li> -->
+    <!--             <li><a href="#">2</a></li> -->
+    <!--             <li><a href="#">3</a></li> -->
+    <!--         </ul> -->
+    <!--     </div> -->
+    <!-- </nav> -->
+    <!-- <script> -->
+    <!--     const hamburger =document.querySelector('.hamburger')  -->
+    <!--     const navLinks = document.querySelector('.nav-links') -->
+    <!--     hamburger.addEventListener('click',()=>{ -->
+    <!--                 navLinks.classList.toggle('active') -->
+    <!--             }) -->
+    <!-- </script> -->
+
+
+    <nav class="nav">
+        <div class="logo">
+            <a href={{url_for('home')}}>
+                <img id='logo' src="../static/images/logo-dark-bio-py-tech.png" alt="">
+            </a>
+        </div>
+        <a class="hamburger" href="#">
+            <span class="bar bar1 bg-dark"></span>
+            <span class="bar bar2 bg-dark"></span>
+            <span class="bar bar3 bg-dark"></span>
+        </a>
+        <div class="nav-links">
+
+            <ul>
                 <li><a href={{url_for('home')}}>Home</a></li>
                 <li><a href={{url_for('tools')}}>Tools</a></li>
                 <li><a href={{url_for('about')}}>About</a></li>
-                <li><a  href="#use">How To use</a></li>
+                <li><a href="#use">How To use</a></li>
             </ul>
-            <div class="ham">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-            </div>
-        </nav>
-          {% block content %}{% endblock %}
-          {% block tools %}{% endblock %}
+        </div>
+        <!-- <div class="ham"> -->
+        <!--     <span class="bar bar1"></span> -->
+        <!--     <span class="bar bar2"></span> -->
+        <!--     <span class="bar bar3"></span> -->
+        <!-- </div> -->
+    </nav>
+    {% block content %}{% endblock %}
+    {% block tools %}{% endblock %}
 
-    <script src={{url_for('static',filename='app.js')}}></script>
-        
-    </body>
+    <script src={{url_for('static',filename='app.js' )}}></script>
+
+</body>
+
 </html>
-

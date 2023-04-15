@@ -3,47 +3,55 @@
 
 {% block content%}
 <header>
+    <div class="ds-f j-s-between al-center p-3">
+        <div class="ctn">
+            <h1 class="fs-xxl">BioPy Tech</h1>
+            <p class="fs-lg">A Collection Of Useful tools For Bioinformatics</p>
+            <button class="btn btn-dark  check_tools mt-2" type="submit">
+                <a class="txt-light" href={{url_for('tools')}}><span> &#8594;</span> Check Tools </a> </button>
+        </div>
+        <div class="bio_svg">
+            <img style="width: 80%; " src="../static/images/bpt.svg" alt="">
+    </div>
 
-            <div class="ctn">
-                <h1>BioPy Tech</h1>
-                <p>A Collection Of Useful tools For Bioinformatics</p>
             </div>
-            <div class="bio_svg">
-                <img src="../static/images/bpt.svg" alt="">
-            </div>
-            <button class="btn check_tools" type="submit">
-                <a href={{url_for('tools')}}><span> &#8594;</span> Check Tools </a> </button>
-            
+
 </header>
 
-    <section class="tools_slider">
-        <h1>Tools</h1>
-        <div class="tls tool">
-             <div class="tl tl1">
+    <section class="tools_slider p-3">
+        <h1 class="align-center pb-3">Tools</h1>
+        <div class="tls tool carousel">
+             <div class="card tl tl1">
             <a href={{url_for('seq_length')}}>
-                <img src={{url_for('static',filename='icons/length.svg')}} alt="">
+                <center>
+                    <img src={{url_for('static',filename='icons/length.svg')}} alt="">
+                </center>
                 <h2>Sequence Length</h2>
             </a>
         </div>
 
 
-        <div class="tl tl2">
+        <div class="card tl tl2">
             <a href={{url_for('dna_cmp')}}>
-            <img src={{url_for('static',filename='icons/cmp.svg')}} alt="">
+                <center>
+                    <img src={{url_for('static',filename='icons/cmp.svg')}} alt="">
+                </center>
             <h2>Dna Complementary </h2>
             </a>
         </div>
 
-        <div class="tl tl3">
+        <div class="card tl tl3">
             <a href={{url_for('gc')}}>
-            <span><h1>GC%</h1></span>
-            <h2>GC% Calculator</h2>
+            <span><h1 class="align-center">GC%</h1></span>
+            <h2 class="m-1">GC% Calculator</h2>
             </a>
         </div>
 
         <div class="more">
             <a href={{url_for('tools')}}>
-            <img src={{url_for('static',filename='icons/right_arrow.svg')}} alt="">
+                <b>
+                    See More >
+                </b>
             </a>
         </div>
 
@@ -51,7 +59,7 @@
         </div>
     </section>
     <section  id='use' class="use">
-        <h1>How To Use</h1>
+        <h1 class="align-center pb-3">How To Use</h1>
         <div>
             <h1>Rna To Peptide</h1>
             <img src={{url_for('static',filename='images/rna_to_peptide.gif')}} alt="">
@@ -75,20 +83,20 @@
                     <h2>Medmh</h2>
                 </div>
                 <div class="flip-back">
-                    <span>website:</span> 
+                    <span>website:</span>
                     <a href="https://medmh.netlify.app/" target='_blank'>
                          <img src={{url_for('static',filename='images/medmh.png')}} alt="">
                     </a>
                     <div class="social">
                      <a href="https://github.com/medragneel" target='_blank'>
                          <img src={{url_for('static',filename='icons/github-brands.svg')}} alt="">
-                     </a> 
+                     </a>
                      <a href="https://codepen.io/Medmh" target='_blank'>
                          <img src={{url_for('static',filename='icons/codepen-brands.svg')}} alt="">
-                     </a> 
+                     </a>
                      <a href="https://www.facebook.com/mirai.dragneel" target='_blank'>
                          <img src={{url_for('static',filename='icons/facebook-brands.svg')}} alt="">
-                     </a> 
+                     </a>
                     </div>
                 </div>
             </div>
@@ -96,6 +104,6 @@
     </section>
      <footer style='text-align: center;padding:20px;'>
          &#169;Copyright All Right Reserved
-     </footer>   
-    
+     </footer>
+
 {% endblock %}

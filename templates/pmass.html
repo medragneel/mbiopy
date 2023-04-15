@@ -5,17 +5,22 @@
 
 {% block content %}
 <section class="gc_per">
-    <h1>Proteins Mass Calculator</h1>
+    <h1 class="align-center p-2">Proteins Mass Calculator</h1>
     <br><br>
+    <center>
     <div class="gc">
         <form action={{url_for('pmass')}} method="post">
-            
+
             <textarea placeholder="enter a protein sequence" class="inp-gc" type="text" name="pmass"></textarea> <br><br>
         <button class="btn gc-btn" type="submit">Get protein mass</button>
         </form>
+        <br>
+        <br>
+
 
       protein mass:  {{pm}}
     </div>
+    </center>
 </section>
 
 {% endblock %}

@@ -6,62 +6,62 @@
 {% block tools %}
 
 <section class="all_tools">
-    <h1>All Tools</h1>
+    <h1 class="align-center p-2">All Tools</h1>
 
-    <div class="tls">
-        <div class="tl tl1">
-            <a href={{url_for('seq_length')}}>
+    <div class="tls grid m-2">
+        <div class="card tl tl1">
+            <a  href={{url_for('seq_length')}}>
                 <img src={{url_for('static',filename='icons/length.svg')}} alt="">
-                <h2>Sequence Length</h2>
+                <h2 class="mt-3">Sequence Length</h2>
             </a>
         </div>
 
 
-        <div class="tl tl2">
+        <div class="card tl tl2">
             <a href={{url_for('dna_cmp')}}>
             <img src={{url_for('static',filename='icons/cmp.svg')}} alt="">
-            <h2>Dna Complementary </h2>
+            <h2 class="mt-2">Dna Complementary </h2>
             </a>
         </div>
 
-        <div class="tl tl3">
+        <div class="card tl tl3">
             <a href={{url_for('gc')}}>
             <span><h1>GC%</h1></span>
-            <h2>GC% Calculator</h2>
+            <h2 class="mt-4">GC% Calculator</h2>
             </a>
         </div>
 
-        <div class="tl tl4">
-            
+        <div class="card tl tl4">
+
             <a href={{url_for('mutations_count')}}>
                 <img src={{url_for('static',filename='icons/mutation.svg')}} alt="">
 
-            <h2>Count Point Mutations</h2>
+            <h2 class="mt-2">Count Point Mutations</h2>
             </a>
         </div>
 
-        <div class="tl tl5">   
+        <div class="card tl tl5">
             <a href={{url_for('pmass')}}>
                 <img src={{url_for('static',filename='icons/proteins.svg')}} alt="">
-                <h2>Calculating Protein Mass</h2>
+                <h2 class="mt-1">Calculating Protein Mass</h2>
             </a>
         </div>
-        <div class="tl tl6">
+        <div class="card tl tl6">
             <a href={{url_for('rna')}}>
                 <img src={{url_for('static',filename='icons/dna.svg')}} alt="">
-                <h2>Rna Sequence</h2>
+                <h2 class="mt-1">Rna Sequence</h2>
             </a>
         </div>
 
-        <div class="tl tl7">   
+        <div class="card tl tl7">
 
             <a href={{url_for('pseq')}}>
             <img src={{url_for('static',filename='icons/prot.svg')}} alt="">
-            <h2>From Rna to Protein</h2>
+            <h2 class="mt-1">From Rna to Protein</h2>
             </a>
         </div>
     </div>
-    
+
 </section>
 
 {% endblock %}
